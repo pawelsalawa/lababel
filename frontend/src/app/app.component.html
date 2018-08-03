@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>LaBabel</span>
+    <mat-form-field class="toolbar-language-box" floatLabel="never">
+      <mat-select placeholder="Language" [disabled]="disableLangSelect" [(value)]="language">
+        <mat-option *ngFor="let lang of languages" [value]="lang.code">{{lang.label}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <span class="toolbar-spacer"></span>
+    <button mat-icon-button>
+      <mat-icon>settings</mat-icon>
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<router-outlet></router-outlet>

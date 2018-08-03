@@ -1,0 +1,58 @@
+<mat-sidenav-container class="container">
+  <mat-sidenav mode="side" opened>
+    <app-grouplist></app-grouplist>
+  </mat-sidenav>
+  <mat-sidenav-content class="main-grid">
+    <div class="msg-list">
+      <mat-toolbar>
+        Original messages
+      </mat-toolbar>
+    </div>
+    <div class="src-code">
+        <mat-toolbar>
+          Source code context
+        </mat-toolbar>
+    </div>
+    <div class="translation-panel">
+      <div class="ts-panel-orig-text">
+        <a href="#" class="shortcuts">Keyboard shortcuts</a>
+        <span class="ts-panel-label">
+          Original text
+        </span>
+        <span class="orig-text-content">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, numquam voluptate hic placeat
+          dicta totam in voluptatem facilis saepe quasi
+          vel maxime ratione quisquam accusamus quos voluptates soluta aut consectetur.
+        </span>
+        <span class="orig-text-comment">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, numquam voluptate hic placeat
+        </span>
+      </div>
+      <div class="ts-panel-translated-text">
+        <span class="ts-panel-label">
+          Translated text
+        </span>
+        <mat-form-field floatLabel="never" class="tr-text-content">
+          <textarea matInput placeholder="Untranslated"></textarea>
+        </mat-form-field>
+        <span class="ts-panel-label tr-comment-label">
+          Translator comments
+        </span>
+        <mat-form-field floatLabel="never" class="tr-comment-content">
+          <input matInput placeholder="Optional">
+        </mat-form-field>
+      </div>
+    </div>  
+    <div class="proposals-and-history">
+        <mat-tab-group>
+            <mat-tab label="Translation proposals">Translation proposals</mat-tab>
+            <mat-tab label="Translation history">Translation history</mat-tab>
+        </mat-tab-group>
+    </div>
+    <div class="warn-panel">
+      <mat-toolbar>
+        Warnings
+      </mat-toolbar>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,16 @@
+<mat-nav-list dense>
+  <div *ngFor="let f of files">
+    <div *ngIf="f.groups && f.groups.length > 0; else elseBlock">
+      <h3 matSubheader><b>{{f.name}}</b></h3>
+      <mat-list-item *ngFor="let grp of f.groups" (click)="loadGroup(grp)">
+        {{grp.label}}
+      </mat-list-item>
+      <mat-divider></mat-divider>
+    </div>
+    <ng-template #elseBlock>
+        <mat-list-item (click)="loadGroup(f.name)">
+            {{f.name}} group
+        </mat-list-item>
+    </ng-template>
+  </div>
+</mat-nav-list>
