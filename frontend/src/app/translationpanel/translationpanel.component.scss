@@ -1,0 +1,85 @@
+.shortcuts {
+    float: right;
+    font-size: 0.9em;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.ts-panel-label {
+    font-weight: bold;
+    margin: 0.5em 0;
+    display: block;
+}
+
+:host {
+    display: table;
+    height: 100%;
+    width: 100%;
+    background-color: #F6F2FF;
+}
+
+$fieldVerticalShift: 18px;
+
+:host > div {
+    text-align: left;
+    overflow-y: auto;
+    padding-top: 10px;
+    height: 100%;
+
+    display: grid;
+    grid-template-areas:
+      'ts-panel-orig-text'
+      'ts-panel-translated-text';
+    grid-gap: 0px;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr;
+
+    .tr-text-content {
+        width: 100%;
+        margin-top: -18px;
+    }
+
+    .tr-comment-label {
+        font-size: 0.8em;
+    }
+    .tr-comment-content {
+        font-size: 0.8em;
+        margin-top: -$fieldVerticalShift;
+        flex-grow: 1;
+    }
+
+    .orig-text-content {
+        display: block;
+    }
+
+    .orig-text-comment {
+        display: block;
+        margin-top: 6px;
+        font-size: 0.8em;
+        font-style: italic;
+        color: darkgray;
+    }
+
+    .comment-div {
+        display: flex;
+        width: 100%;
+        vertical-align: top;
+
+        .apply-button {
+            margin-left: 40px;
+            margin-right: 10px;
+            margin-top: -$fieldVerticalShift;
+            margin-bottom: $fieldVerticalShift;
+        }
+    }
+}
+
+.ts-panel-orig-text {
+    grid-area: ts-panel-orig-text;
+    margin: 0 16px;
+}
+
+.ts-panel-translated-text {
+    grid-area: ts-panel-translated-text;
+    margin: 0 16px;
+}

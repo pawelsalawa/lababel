@@ -15,12 +15,22 @@ import { GrouplistComponent } from './grouplist/grouplist.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatTabsModule} from '@angular/material/tabs';
+import { TranslationpanelComponent } from './translationpanel/translationpanel.component';
+import { OrigmsglistComponent } from './origmsglist/origmsglist.component';
+import {MatTableModule} from '@angular/material/table';
+import { HighlightModule } from 'ngx-highlightjs';
+import { CodecontextpanelComponent } from './codecontextpanel/codecontextpanel.component';
+import { KeyboardShortcutsModule } from 'ng-keyboard-shortcuts';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    GrouplistComponent
+    GrouplistComponent,
+    TranslationpanelComponent,
+    OrigmsglistComponent,
+    CodecontextpanelComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +44,11 @@ import {MatTabsModule} from '@angular/material/tabs';
     MatListModule,
     MatFormFieldModule,
     MatInputModule,
-    MatTabsModule
+    MatTabsModule,
+    MatTableModule,
+    HighlightModule.forRoot({theme: 'qtcreator_light'}),
+    KeyboardShortcutsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

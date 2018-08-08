@@ -8,7 +8,8 @@
   "scripts": {
     "lint": "eslint .",
     "start": "node .",
-    "posttest": "npm run lint && nsp check"
+    "posttest": "npm run lint && nsp check",
+    "postinstall": "cd nested_dir && npm install && cd .."
   },
   "dependencies": {
     "compression": "^1.0.3",
@@ -30,6 +31,6 @@
     "type": "",
     "url": ""
   },
-  "license": "UNLICENSED",
-  "description": "lababel"
+  "license": "AGPL 3",
+  "description": "Sofotware message translating webapp"
 }

@@ -1,4 +1,6 @@
- .container {
+@import "../../global-vars.scss";
+
+.container {
     position: absolute;
     top: 64px;
     bottom: 0;
@@ -16,7 +18,6 @@ app-grouplist {
     width: 100%;
 }
 
-
 .msg-list { grid-area: msg-list; }
 .src-code { grid-area: src-code; }
 .translation-panel { grid-area: ts-panel; }
@@ -29,8 +30,9 @@ app-grouplist {
       'msg-list msg-list msg-list msg-list src-code src-code src-code src-code'
       'ts-panel ts-panel ts-panel ts-panel ts-panel ts-panel ts-panel ts-panel'
       'props-and-hist props-and-hist props-and-hist props-and-hist props-and-hist warn-panel warn-panel warn-panel';
-    grid-template-rows: 30% 40% 30%;
     grid-gap: 1px;
+    grid-template-rows: 33% 34% auto;
+    grid-template-columns: 13% 13% 12% 12% 12% 12% 13% auto;
     padding: 0px;
     background-color: #666;
 }
@@ -42,58 +44,9 @@ app-grouplist {
 
     mat-toolbar {
         background-color: rgba(103, 58, 183, 0.8);
-        height: 32px;
+        height: $panel-title-height;
         color: #fff;
         font-size: 1em;
-    }
-
-    .shortcuts {
-        float: right;
-        font-size: 0.9em;
-        margin-right: 10px;
-        margin-top: 10px;
-    }
-    
-    .ts-panel-label {
-        font-weight: bold;
-        margin: 0.5em 0;
-        display: block;
-    }
-}
-
-.ts-panel-orig-text {
-    grid-area: ts-panel-orig-text;
-    margin: 0 16px;
-}
-
-.ts-panel-translated-text {
-    grid-area: ts-panel-translated-text;
-    margin: 0 16px;
-}
-
-.main-grid > div.translation-panel {
-    text-align: left;
-    background-color: #F6F2FF;
-    overflow-y: auto;
-    padding-top: 10px;
-
-    display: grid;
-    grid-template-areas:
-      'ts-panel-orig-text'
-      'ts-panel-translated-text';
-    grid-gap: 0px;
-
-    .tr-text-content {
-        width: 100%;
-        margin-top: -18px;
-    }
-
-    .tr-comment-label {
-        font-size: 0.8em;
-    }
-    .tr-comment-content {
-        font-size: 0.8em;
-        margin-top: -18px;
     }
 }
 

@@ -1,0 +1,31 @@
+<div>
+  <div class="ts-panel-orig-text">
+    <a href="#" class="shortcuts">Keyboard shortcuts</a>
+    <span class="ts-panel-label">
+      Original text
+    </span>
+    <span class="orig-text-content">
+      {{currentMsg.originalText}}
+    </span>
+    <span class="orig-text-comment">
+      {{currentMsg.translatorComments}}
+    </span>
+  </div>
+  <div class="ts-panel-translated-text">
+    <span class="ts-panel-label">
+      Translated text
+    </span>
+    <mat-form-field floatLabel="never" class="tr-text-content">
+      <textarea matInput placeholder="Untranslated" id="translation-text" [(ngModel)]="currentMsg.translatedText"></textarea>
+    </mat-form-field>
+    <span class="ts-panel-label tr-comment-label">
+      Translator comments
+    </span>
+    <div class="comment-div">
+      <mat-form-field floatLabel="never" class="tr-comment-content">
+        <input matInput placeholder="Optional" [(ngModel)]="currentMsg.translatorComments">
+      </mat-form-field>
+      <button mat-flat-button color="primary" class="apply-button" (click)="applyAndNext()">Apply &amp; next (Ctrl+Enter)</button>
+    </div>
+  </div>
+</div>
